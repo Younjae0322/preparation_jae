@@ -38,9 +38,8 @@ public class CarMain {
 		}
 	}
 	public static void systemMenu() {
-		System.out.println("[차량의 종류를 선택하세요.]");
-		System.out.println("==============================================");
-		System.out.println("1.경차 | 2.승용차 | 3.전기차 | 4.");
+		typeChoice();
+		System.out.println("1.경차 | 2.승용차 | 3.전기차 | 4.되돌아가기");
 		System.out.println("==============================================");
 		System.out.print("선택> ");
 		String choiceS = scanner.nextLine();
@@ -48,13 +47,36 @@ public class CarMain {
 		while(true) {
 			if(choiceS.equals("경차") || choiceS.equals("1")) {
 				kiaNameMenuS();
+			}else if(choiceS.equals("승용차") || choiceS.equals("2")) {
+				kiaNameMenuM();
 			}
 		}
 
 	}
-	public static void kiaNameMenuS() {
-		System.out.println("[차량의 이름을 선택하세요.]");
+	public static void kiaNameMenuM() {
+		nameChoice();
+		System.out.println("1.K3 | 2.K3GT | 3.K5 | 4.K8 | 5.K9 | 6.되돌아가기");
 		System.out.println("==============================================");
+		System.out.print("선택> ");
+		String choiceS = scanner.nextLine();
+
+		if(choiceS.equals("K3") || choiceS.equals("1") || choiceS.equals("k3")) {
+			kiaMorningEngineS();
+	 } else if(choiceS.equals("K3GT") || choiceS.equals("2")) {
+		 kiaRayEngineS();
+	 } else if(choiceS.equals("K5") || choiceS.equals("3") || choiceS.equals("k5")) {
+		 systemMenu();
+	 } else if (choiceS.equals("K8") || choiceS.equals("4") || choiceS.equals("k8")){
+		systemMenu();
+	 } else if (choiceS.equals("K9") || choiceS.equals("5") || choiceS.equals("k9")) {
+		 systemMenu();
+	 } else {
+		 System.out.println();
+	 }
+		
+	}
+	public static void kiaNameMenuS() {
+		nameChoice();
 		System.out.println("1.Morning | 2.Ray | 3.되돌아가기 ");
 		System.out.println("==============================================");
 		System.out.print("선택> ");
@@ -73,8 +95,7 @@ public class CarMain {
 				
 	}
 	public static void kiaRayEngineS() {
-		System.out.println("[차량의 엔진타입을 선택하세요.]");
-		System.out.println("==============================================");
+		engineChoice();
 		System.out.println("1.가솔린 1.0 | 2.되돌아가기 ");
 		System.out.println("==============================================");
 		System.out.print("선택> ");
@@ -90,8 +111,7 @@ public class CarMain {
 		}
 	}
 	public static void kiaMorningEngineS() {
-		System.out.println("[차량의 엔진타입을 선택하세요.]");
-		System.out.println("==============================================");
+		engineChoice();
 		System.out.println("1.가솔린 1.0 | 2.되돌아가기 ");
 		System.out.println("==============================================");
 		System.out.print("선택> ");
@@ -128,6 +148,18 @@ public class CarMain {
 		}
 		System.out.println();
 		brandMenu();
+	}
+	public static void engineChoice() {
+		System.out.println("[차량의 엔진타입을 선택하세요.]");
+		System.out.println("==============================================");
+	}
+	public static void nameChoice() {
+		System.out.println("[차량의 이름을 선택하세요.]");
+		System.out.println("==============================================");
+	}
+	public static void typeChoice() {
+		System.out.println("[차량의 종류를 선택하세요.]");
+		System.out.println("==============================================");
 	}
 	//제원 표 호출
 	public static void specificationTable() {
