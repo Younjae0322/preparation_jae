@@ -1,7 +1,7 @@
 package com.javalab.sec03.Car;
 
 public class Car {
-	private String type;   //종류(suv 승용,경차)
+	
 	private String name;   //이름
 	private String engine; //엔진
 	private int length;    //전장
@@ -14,10 +14,10 @@ public class Car {
 	
 
 
-	public Car(String type, String name, String engine, int length, int width, int height, int wheelbase,
+	public Car(String name, String engine, int length, int width, int height, int wheelbase,
 			int displacement, int price) {
 		super();
-		this.type = type;
+
 		this.name = name;
 		this.engine = engine;
 		this.length = length;
@@ -27,17 +27,6 @@ public class Car {
 		this.displacement = displacement;
 		this.price = price;
 	}
-
-
-	public String getType() {
-		return type;
-	}
-
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
 
 	public String getName() {
 		return name;
