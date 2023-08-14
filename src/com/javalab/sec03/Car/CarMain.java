@@ -115,6 +115,7 @@ public class CarMain {
 			}
 		}
 		System.out.println();
+		brandMenu();
 	}
 	public static void ray() {
 		for (Car c : kia) {
@@ -126,6 +127,7 @@ public class CarMain {
 			}
 		}
 		System.out.println();
+		brandMenu();
 	}
 	//제원 표 호출
 	public static void specificationTable() {
