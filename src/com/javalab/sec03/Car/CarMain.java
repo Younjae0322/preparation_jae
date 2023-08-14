@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CarMain {
 	static Scanner scanner = new Scanner(System.in);
-	public static Car[] kia = new Car[100];
+	public static Car[] kia = new Car[18];
 	//모닝,레이 엔진 (가솔린 1.0) K3,K3GT (가솔린 1.6)
 
 	public static void main(String[] args) {
@@ -16,23 +16,23 @@ public class CarMain {
 	public static void brandMenu() {
 		System.out.println("[정보를 보고 싶은 차량의 회사를 선택하세요.]");
 		System.out.println("=====================================");
-		System.out.println("1. hyundai | 2. kia | 3. 종료");
+		System.out.println("1. kia | 2. hyundai | 3. 종료");
 		System.out.println("=====================================");
 		System.out.print("선택> ");
 		
 		String choiceS = scanner.nextLine();
 		while(true) {
-			if(choiceS.equals("1") || choiceS.equals("현대") || choiceS.equals("hyundai")) {
+			if(choiceS.equals("1") || choiceS.equals("기아") || choiceS.equals("kia")) {
 				systemMenu();
 				break;
-			}else if(choiceS.equals("2") || choiceS.equals("기아") || choiceS.equals("kia")) {
+			}else if(choiceS.equals("2") || choiceS.equals("현대") || choiceS.equals("hyundai")) {
 				systemMenu();
 				break;
 			}else if(choiceS.equals("3") || choiceS.equals("종료")) {
 				System.out.println("프로그램을 종료합니다.");
 				return;
 			}else {
-				System.out.println("옳지 않은 선택입니다. 다시 선택하세요.");
+				System.out.println("잘못된 선택입니다. 다시 선택하세요.");
 				break;
 			}
 		}
@@ -60,13 +60,12 @@ public class CarMain {
 		System.out.print("선택> ");
 		String choiceS = scanner.nextLine();
 		
-		while(true) {
 			if(choiceS.equals("모닝") || choiceS.equals("1") || choiceS.equals("Morning")) {
-				
+				kiaEngineSmall();
+		 } else if(choiceS.equals("레이") || choiceS.equals("2") || choiceS.equals("Ray")) {
+			 
 		 }
-	 }
-			
-		
+				
 	}
 	public static void kiaEngineSmall() {
 		System.out.println("[차량의 엔진타입을 선택하세요.]");
@@ -77,20 +76,25 @@ public class CarMain {
 		String choiceS = scanner.nextLine();
 		
 		if(choiceS.equals("1") || choiceS.equals("가솔린")) {
-			
+			morning();
+		}else if(choiceS.equals("2") || choiceS.equals("되돌아가기")) {
+			kiaNameMenuSmall();
+		}else {
+			System.out.println("잘못된 선택입니다. 다시 선택하세요.");
+			return;
 		}
-		
-		
-		
 	}
 	public static void morning() {
 		for (Car c : kia) {
 			if(c.getName().equals("Morning") && c.getEngine().equals("가솔린 1.0")) {
-				System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %d \n전폭 : %d \n전고 : %d \n축거 : %d \n배기량 : %d \n 가격 : %d만원"
-						, c.getName());
-				
+				System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
+						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
+						c.getPrice());
 			}
 		}
+		System.out.println();
+		return;
 	}
 	//제원 표 호출
 	public static void specificationTable() {
