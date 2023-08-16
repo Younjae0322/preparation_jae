@@ -61,19 +61,21 @@ public class CarMain {
 		String choiceS = scanner.nextLine();
 
 		if(choiceS.equals("K3") || choiceS.equals("1") || choiceS.equals("k3")) {
-			kiaMorningEngineS();
+			kiaK3EngineM();
 	 } else if(choiceS.equals("K3GT") || choiceS.equals("2")) {
-		 kiaRayEngineS();
+		 kiaK3gtEngineM();
 	 } else if(choiceS.equals("K5") || choiceS.equals("3") || choiceS.equals("k5")) {
 		 systemMenu();
 	 } else if (choiceS.equals("K8") || choiceS.equals("4") || choiceS.equals("k8")){
 		systemMenu();
 	 } else if (choiceS.equals("K9") || choiceS.equals("5") || choiceS.equals("k9")) {
 		 systemMenu();
+	 } else if (choiceS.equals("6") || choiceS.equals("되돌아가기")) {
+		 kiaNameMenuM();
 	 } else {
-		 System.out.println();
+		 System.out.println("잘못된 선택입니다. 다시 선택하세요.");
+		 return;
 	 }
-		
 	}
 	public static void kiaNameMenuS() {
 		nameChoice();
@@ -93,6 +95,48 @@ public class CarMain {
 			 return;
 		 }
 				
+	}
+	public static void kiaK5EngineM() {
+		engineChoice();
+		System.out.println("1.가솔린 1.6 | 2.가솔린 2.0 | 3.LPI 2.0 | 4.하이브리드 2.0 | 5. 되돌아가기");
+		System.out.println("==============================================");
+		System.out.print("선택> ");
+		String choiceS = scanner.nextLine();
+		
+		
+	}
+	public static void kiaK3gtEngineM() {
+		engineChoice();
+		System.out.println("1.가솔린 1.6 | 2.되돌아가기 ");
+		System.out.println("==============================================");
+		System.out.print("선택> ");
+		String choiceS = scanner.nextLine();
+		
+		if(choiceS.equals("1") || choiceS.equals("가솔린")) {
+			k3gt();
+		}else if(choiceS.equals("2") || choiceS.equals("되돌아가기")) {
+			kiaNameMenuM();
+		}else {
+			System.out.println("잘못된 선택입니다. 다시 선택하세요.");
+			kiaK3EngineM();
+		}
+	}
+	public static void kiaK3EngineM() {
+		engineChoice();
+		System.out.println("1.가솔린 1.6 | 2.되돌아가기 ");
+		System.out.println("==============================================");
+		System.out.print("선택> ");
+		String choiceS = scanner.nextLine();
+		
+		if(choiceS.equals("1") || choiceS.equals("가솔린")) {
+			k3();
+		}else if(choiceS.equals("2") || choiceS.equals("되돌아가기")) {
+			kiaNameMenuM();
+		}else {
+			System.out.println("잘못된 선택입니다. 다시 선택하세요.");
+			kiaK3EngineM();
+		}
+		
 	}
 	public static void kiaRayEngineS() {
 		engineChoice();
@@ -136,6 +180,32 @@ public class CarMain {
 		}
 		System.out.println();
 		brandMenu();
+	}
+	public static void k3gt() {
+		for (Car c : kia) {
+			if(c.getName().equals("K3GT") && c.getEngine().equals("가솔린 1.6")) {
+				System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
+						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
+						c.getPrice());
+			}
+		}
+		System.out.println();
+		brandMenu();
+		
+	}
+	public static void k3() {
+		for (Car c : kia) {
+			if(c.getName().equals("K3") && c.getEngine().equals("가솔린 1.6")) {
+				System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
+						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
+						c.getPrice());
+			}
+		}
+		System.out.println();
+		brandMenu();
+		
 	}
 	public static void ray() {
 		for (Car c : kia) {
