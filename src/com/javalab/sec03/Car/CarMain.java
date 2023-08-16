@@ -22,7 +22,6 @@ public class CarMain {
 		System.out.println("======================================================================");
 		System.out.print("선택> ");
 		int choiceS = scanner.nextInt();
-		
 		while(true) {
 			if(choiceS == 1 ) {
 				kiaNameMenuS();
@@ -42,7 +41,6 @@ public class CarMain {
 			 	break;
 			}
 		}
-
 	}
 	public static void kiaNameMenuE() {
 		nameChoice();
@@ -54,31 +52,31 @@ public class CarMain {
 		for (Car c : kia) {
 			if(choiceS == 1 ) {
 				if(c.getEngine().equals("EV") && c.getName().equals("니로EV")){
-					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배터리용량 : %d \n가격 : %d만원"
 						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
 						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
 						c.getPrice());  }
 			} else if(choiceS == 2 ) {
 				if(c.getEngine().equals("EV") && c.getName().equals("니로Plus")){
-					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배터리용량 : %d \n가격 : %d만원"
 						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
 						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
 						c.getPrice());  }
 			} else if(choiceS == 3 ) {
 				if(c.getEngine().equals("EV") && c.getName().equals("EV6")){
-					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배터리용량 : %d \n가격 : %d만원"
 						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
 						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
 						c.getPrice());  }
 			} else if (choiceS == 4){
 				if(c.getEngine().equals("EV") && c.getName().equals("EV6GT")){
-					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배터리용량 : %d \n가격 : %d만원"
 						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
 						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
 						c.getPrice());  }
 			} else if (choiceS == 5 ) {
 				if(c.getEngine().equals("EV") && c.getName().equals("EV9")){
-					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배터리용량 : %d \n가격 : %d만원"
 						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
 						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
 						c.getPrice());  }
@@ -88,9 +86,9 @@ public class CarMain {
 			System.out.println("잘못된 선택입니다. 다시 선택하세요.");
 		 	kiaNameMenuE();
 		}
-			systemMenu();
-			break;
 	}
+		System.out.println();
+		systemMenu();
 }
 	public static void kiaNameMenuM() {
 		nameChoice();
@@ -160,10 +158,9 @@ public class CarMain {
 				System.out.println("잘못된 선택입니다. 다시 선택하세요.");
 		    	kiaK9EngineM();
 			}
-			systemMenu();
-			break;
 		}
-		
+		System.out.println();
+		systemMenu();
 	}
 	public static void kiaK8EngineM() {
 		engineChoice();
@@ -174,7 +171,7 @@ public class CarMain {
 		for (Car c : kia) {
 			if(choiceS == 1 ) {
 				if(c.getEngine().equals("가솔린 2.5") && c.getName().equals("K8")){
-				System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+				   System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
 						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
 						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
 						c.getPrice());  }
@@ -190,9 +187,9 @@ public class CarMain {
 				System.out.println("잘못된 선택입니다. 다시 선택하세요.");
 		    	kiaK8EngineM();
 			}
-			systemMenu();
-			break;
 		}
+		System.out.println();
+		systemMenu();
 	}
 	public static void kiaK5EngineM() {
 		engineChoice();
@@ -204,7 +201,7 @@ public class CarMain {
 		for (Car c : kia) {
 			if(choiceS == 1 ) {
 				if(c.getEngine().equals("가솔린 1.6 터보") && c.getName().equals("K5")){
-				System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
+					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
 						, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
 						, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
 						c.getPrice());  }
@@ -215,7 +212,7 @@ public class CarMain {
 							, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
 							c.getPrice());  }
 			}else if(choiceS == 3 ){
-				if(c.getEngine().equals("LPI 2.0") && c.getName().equals("K5")){
+				if(c.getEngine().contains("LPI 2.0") && c.getName().equals("K5")){
 					System.out.printf("차량이름 : %s \n차량엔진 : %s \n전장 : %dmm \n전폭 : %dmm \n전고 : %dmm \n축거 : %dmm \n배기량 : %dcc \n가격 : %d만원"
 							, c.getName(), c.getEngine(), c.getLength(), c.getWidth()
 							, c.getHeight(), c.getWheelbase(), c.getDisplacement(),
@@ -232,8 +229,9 @@ public class CarMain {
 		    	System.out.println("잘못된 선택입니다. 다시 선택하세요.");
 		    	kiaK5EngineM();
 		    }
-
-	}	
+		}
+		System.out.println();
+		systemMenu();
 }
 	public static void kiaK3gtEngineM() {
 		engineChoice();
@@ -243,7 +241,7 @@ public class CarMain {
 		int choiceS = scanner.nextInt();
 		
 		if(choiceS == 1 ) {
-			k3();
+			k3gt();
 		}else if(choiceS == 2) {
 			kiaNameMenuM();
 		}else {
@@ -286,7 +284,7 @@ public class CarMain {
 	}
 	public static void kiaMorningEngineS() {
 		engineChoice();
-		System.out.println("1.가솔린 1.0 | 2.되돌아가기                              (숫자만 입력가능합니다.) ");
+		System.out.println("1.가솔린 1.0 | 2.되돌아가기                               (숫자만 입력가능합니다.)");
 		System.out.println("======================================================================");
 		System.out.print("선택> ");
 		int choiceS = scanner.nextInt();

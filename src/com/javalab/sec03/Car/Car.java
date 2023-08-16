@@ -104,6 +104,12 @@ public class Car {
 	public void setEngine(String engine) {
 		this.engine = engine;
 	}
+
+	@Override
+	public String toString() {
+		return "Car [name=" + name + ", engine=" + engine + ", length=" + length + ", width=" + width + ", height="
+				+ height + ", wheelbase=" + wheelbase + ", displacement=" + displacement + ", price=" + price + "]";
+	}
 	
 	
 	
