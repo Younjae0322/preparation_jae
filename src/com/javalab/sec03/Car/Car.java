@@ -2,6 +2,8 @@ package com.javalab.sec03.Car;
 
 public class Car {
 	
+
+
 	private String name;   //이름
 	private String engine; //엔진
 	private int length;    //전장

@@ -298,7 +298,6 @@ public class CarMain {
 			kiaMorningEngineS();
 		}   
 	}
-	
 	public static void morning() {
 		for (Car c : kia) {
 			if(c.getName().equals("Morning") && c.getEngine().equals("가솔린 1.0")) {
@@ -311,7 +310,6 @@ public class CarMain {
 		System.out.println();
 		systemMenu();
 	}	
-
 	public static void k3gt() {
 		for (Car c : kia) {
 			if(c.getName().equals("K3GT") && c.getEngine().equals("가솔린 1.6")) {

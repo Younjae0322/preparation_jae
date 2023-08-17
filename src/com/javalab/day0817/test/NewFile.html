@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let names = ["김정민", "조수만", "백금열"];
+	let korean = [82, 74, 90];
+	let germany = [90, 88, 85];
+	let math = [70, 83, 94];
+	
+	let numStudents = names.length;
+	let avg = [];
+	
+	for(let i = 0; i < numStudents; i++){
+		avg[i] = (korean[i] + germany[i] + math[i])/3;
+	}
+	console.log(names[0] + " " + names[1] + " " + names[2]);
+	console.log(avg[0].toFixed(2) + " " + avg[1].toFixed(2) + " " + avg[2].toFixed(2));
+</script>
+</head>
+<body>
+
+</body>
+</html>
