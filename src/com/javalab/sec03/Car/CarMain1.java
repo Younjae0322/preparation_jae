@@ -2,7 +2,7 @@ package com.javalab.sec03.Car;
 
 import java.util.Scanner;
 
-public class CarMain {
+public class CarMain1 {
 	static Scanner scanner = new Scanner(System.in);
 	public static Car[] kia = new Car[17];
 
